@@ -11,6 +11,15 @@ describe("User component", () => {
         expect(message).not.toBeInTheDocument();
     })
 
+    it("should test if the value typed in the ionput is correct", () => {
+        render(<User/>)
+
+        const input = screen.getByPlaceholderText("digite seu nome");
+        fireEvent.change(input, { target: { value: "Micael"}})
+
+        expect(input).toHaveValue("Micael");
+    })
+
     it("should display the name when click on button", () => {
         render(<User/>)
 

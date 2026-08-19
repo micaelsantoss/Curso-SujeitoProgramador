@@ -1,4 +1,5 @@
 import { Button } from "./components/Button"
+import { Posts } from "./components/Posts"
 
 function App() {
   return (
@@ -8,6 +9,8 @@ function App() {
       <Button onClick={() => alert("clicooou")} disabled={true}>
         Aperte aqui
       </Button>
+
+      <Posts/>
     </div>
   )
 }
